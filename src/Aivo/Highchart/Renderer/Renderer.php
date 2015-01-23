@@ -214,9 +214,6 @@ class Renderer implements RendererInterface
             'enabled' => $tooltip->isEnabled(),
         );
 
-        if (null !== $tooltip->getFormatter()) {
-            $options['formatter'] = $tooltip->getFormatter();
-        }
         if (0 < count($tooltip->getStyles())) {
             $options['style'] = $tooltip->getStyles();
         }
@@ -275,9 +272,6 @@ class Renderer implements RendererInterface
         if (null !== $axis->getLabel()->getYOffset()) {
             $options['labels']['y'] = $axis->getLabel()->getYOffset();
         }
-        if (null !== $axis->getLabel()->getFormatter()) {
-            $options['labels']['formatter'] = $axis->getLabel()->getFormatter();
-        }
         $options['tickWidth'] = $axis->getTickWidth();
         $options['gridLineWidth'] = $axis->getGridLineWidth();
 
@@ -332,9 +326,6 @@ class Renderer implements RendererInterface
 
         foreach ($series->getDataPoints() as $dataPoint) {
             $options['data'][] = $this->renderDataPoint($dataPoint);
-        }
-        if (null !== $series->getLabelsFormatter()) {
-            $options['dataLabels']['formatter'] = $series->getLabelsFormatter();
         }
 
         $options['marker'] = $this->renderMarker($series->getMarker());
