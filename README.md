@@ -3,9 +3,6 @@ This is a package for generating a Highchart JSON config.
 
 Based in [PHP Highcharts](https://github.com/misd-service-development/php-highcharts).
 
-Instalation
------
-
 ## Installation
 
 Run the following command and provide the latest stable version (e.g v2.4.15) :
