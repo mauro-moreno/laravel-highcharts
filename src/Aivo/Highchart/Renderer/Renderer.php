@@ -61,6 +61,21 @@ class Renderer implements RendererInterface
     {
         $this->dispatcher = $dispatcher;
     }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function render(ChartInterface $chart)
+    {
+        if (null !== $this->dispatcher) {
+            $event = new RenderEvent($chart);
+            $this->dispatcher->dispatch('highcharts.render', $event);
+        }
+
+        $options = $this->renderChart($chart);
+
+        return $options;
+    }
 
     /**
      * Renders a chart.

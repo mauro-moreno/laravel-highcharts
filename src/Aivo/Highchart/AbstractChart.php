@@ -10,6 +10,8 @@ use Aivo\Highchart\Exception\InvalidArgumentException;
 use Aivo\Highchart\Series\SeriesInterface;
 use Aivo\Highchart\Tooltip\Tooltip;
 use Aivo\Highchart\Tooltip\TooltipInterface;
+use Aivo\Highchart\Renderer\Renderer;
+use Aivo\Highchart\Renderer\RendererInterface;
 
 /**
  * Abstract chart.
@@ -246,6 +248,18 @@ abstract class AbstractChart implements ChartInterface
     public function getCredit()
     {
         return $this->credit;
+    }
+    
+    /**
+     * Render
+     * 
+     * @return array
+     */
+    public function render()
+    {
+        $renderer = new Renderer();
+        
+        return $renderer->render($this);
     }
 
 }

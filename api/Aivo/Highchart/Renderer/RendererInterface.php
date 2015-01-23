@@ -33,19 +33,6 @@ interface RendererInterface
 
     /**
      * @param ChartInterface $chart
-     * @param string         $element
-     * @param array          $attributes
-     *
-     * @return string
-     */
-    public function renderContainer(
-        ChartInterface $chart,
-        $element = 'div',
-        $attributes = array()
-    );
-
-    /**
-     * @param ChartInterface $chart
      *
      * @return string
      */
