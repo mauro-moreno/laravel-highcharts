@@ -88,9 +88,6 @@ class Renderer implements RendererInterface
     {
 
         $options = array(
-            'chart' => array(
-                'renderTo' => $chart->getId(),
-            ),
             'title' => array(
                 'text' => $chart->getTitle(),
             ),
