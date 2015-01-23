@@ -4,10 +4,15 @@ namespace Aivo\Highchart;
 
 class Chart extends AbstractChart
 {
-    
-    public function getJson()
+
+    /**
+     * Factory method.
+     *
+     * @return ChartInterface New chart.
+     */
+    public static function factory()
     {
-        return json_encode($this->options);
+        return new self();
     }
 
 }

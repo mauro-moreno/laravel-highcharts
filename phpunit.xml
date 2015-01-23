@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit backupGlobals="false"
     backupStaticAttributes="false"
-    bootstrap="vendor/autoload.php"
+    bootstrap="tests/bootstrap.php"
     colors="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
@@ -10,8 +10,8 @@
     stopOnFailure="false"
     syntaxCheck="true">
     <testsuites>
-        <testsuite name="Highchartphp Test Suite">
-            <directory suffix=".php">./tests/</directory>
+        <testsuite name="Highchart Test Suite">
+            <directory suffix=".php">./tests/Aivo/Highchart</directory>
         </testsuite>
     </testsuites>
 </phpunit>
