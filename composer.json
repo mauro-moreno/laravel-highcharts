@@ -1,0 +1,24 @@
+{
+    "name": "mauro-moreno/laravel-highcharts",
+    "description": "This is a package for generating a Highchart JSON config.",
+    "keywords": ["laravel", "highcharts"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mauro Moreno",
+            "email": "mmoreno@aivo.co"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "illuminate/support": "4.*|5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Aivo\\Highchart": "src/"
+        }
+    }
+}
