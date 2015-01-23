@@ -3,12 +3,35 @@ This is a package for generating a Highchart JSON config.
 
 Based in [PHP Highcharts](https://github.com/misd-service-development/php-highcharts).
 
+Instalation
+-----
+
+## Installation
+
+Run the following command and provide the latest stable version (e.g v2.4.15) :
+
+```bash
+composer require mauro-moreno/laravel-highchart
+```
+
+or add the following to your `composer.json` file :
+
+```json
+"mauro-moreno/laravel-highchart": "dev-master"
+```
+
+Then register this service provider with Laravel :
+
+```php
+'Aivo\Highchart\HighchartServiceProvider',
+```
+
 Usage
 -----
 
 Create a chart:
 
-    $chart = Chart::factory()
+    $chart = App::make('highchart')
         ->setTitle('Scatter plot with regression line')
         ->addSeries(
             array(
