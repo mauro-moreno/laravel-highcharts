@@ -8,13 +8,13 @@ Based in [PHP Highcharts](https://github.com/misd-service-development/php-highch
 Run the following command and provide the latest stable version (e.g v2.4.15) :
 
 ```bash
-composer require mauro-moreno/laravel-highchart
+composer require mauro-moreno/laravel-highcharts
 ```
 
 or add the following to your `composer.json` file :
 
 ```json
-"mauro-moreno/laravel-highchart": "dev-master"
+"mauro-moreno/laravel-highcharts": "dev-master"
 ```
 
 Then register this service provider with Laravel :
@@ -44,3 +44,4 @@ Create a chart:
             )
         )
     ;
+    $chart->render();
