@@ -73,4 +73,20 @@ interface DataPointInterface
      */
     public function setYValue($yValue);
 
+    /**
+     * Gets the color.
+     *
+     * @return string color, or `null` if not set.
+     */
+    public function getColor();
+
+    /**
+     * Sets the color.
+     *
+     * @param string $color or `null` to remove a set value.
+     *
+     * @return self Reference to the data point.
+     */
+    public function setColor($color);
+
 }

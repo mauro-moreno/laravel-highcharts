@@ -132,4 +132,54 @@ interface PieSeriesInterface extends SeriesInterface
      */
     public function getHoverState();
 
+    /**
+     * Set inner size
+     *
+     * @param float|null $size
+     *
+     * @param boolean $percentage
+     *
+     * @return self reference to the series
+     */
+    public function setInnerSize($size, $percentage = true);
+
+    /**
+     * get Inner Size
+     *
+     * @return float inner size
+     */
+    public function getInnerSize();
+
+    /**
+     * Set start angle
+     *
+     * @param float|null $angle
+     *
+     * @return self reference to the series
+     */
+    public function setStartAngle($angle);
+
+    /**
+     * get start angle
+     *
+     * @return float start angle
+     */
+    public function getStartAngle();
+
+    /**
+     * set end angle
+     *
+     * @param float|null $angle
+     *
+     * @return self reference to the series
+     */
+    public function setEndAngle($angle);
+
+    /**
+     * get end angle
+     *
+     * @return float end angle
+     */
+    public function getEndAngle();
+
 }

@@ -61,7 +61,7 @@ class Renderer implements RendererInterface
     {
         $this->dispatcher = $dispatcher;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -90,6 +90,9 @@ class Renderer implements RendererInterface
         $options = array(
             'title' => array(
                 'text' => $chart->getTitle(),
+                'align' => $chart->getTitleAlign(),
+                'verticalAlign' => $chart->getTitleVAlign(),
+                'y' => $chart->getTitleY()
             ),
             'subtitle' => array(
                 'text' => $chart->getSubtitle(),
@@ -323,6 +326,15 @@ class Renderer implements RendererInterface
         if (null !== $series->getYAxis()) {
             $options['yAxis'] = $series->getYAxis();
         }
+        if (null !== $series->getInnerSize()) {
+            $options['innerSize'] = $series->getInnerSize();
+        }
+        if (null !== $series->getStartAngle()) {
+            $options['startAngle'] = $series->getStartAngle();
+        }
+        if (null !== $series->getEndAngle()) {
+            $options['endAngle'] = $series->getEndAngle();
+        }
 
         foreach ($series->getDataPoints() as $dataPoint) {
             $options['data'][] = $this->renderDataPoint($dataPoint);
@@ -413,6 +425,8 @@ class Renderer implements RendererInterface
             $options['dataLabels']['distance'] = $series->getLabelsDistance();
         }
 
+        $options['dataLabels']['style'] = $series->getLabelStyle();
+
         $hoverState = array(
             'enabled' => $series->getHoverState()->isEnabled(),
             'marker' => $this->renderMarker($series->getHoverState()->getMarker()),
@@ -461,6 +475,9 @@ class Renderer implements RendererInterface
         $options = array();
         if (null !== $dataPoint->getName()) {
             $options['name'] = $dataPoint->getName();
+        }
+        if (null !== $dataPoint->getColor()) {
+            $options['color'] = $dataPoint->getColor();
         }
         if ($dataPoint instanceof PieDataPointInterface) {
             $options['sliced'] = $dataPoint->isSliced();
