@@ -56,6 +56,81 @@ abstract class AbstractChart implements ChartInterface
     }
 
     /**
+     * Title align.
+     *
+     * @var string|null
+     */
+    protected $titleAlign;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTitleAlign()
+    {
+        return $this->titleAlign;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setTitleAlign($titleAlign = null)
+    {
+        $this->titleAlign = $titleAlign;
+
+        return $this;
+    }
+
+    /**
+     * Title vertical align.
+     *
+     * @var string|null
+     */
+    protected $titleVAlign;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTitleVAlign()
+    {
+        return $this->titleVAlign;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setTitleVAlign($titleVAlign = null)
+    {
+        $this->titleVAlign = $titleVAlign;
+
+        return $this;
+    }
+
+    /**
+     * Title Y.
+     *
+     * @var int
+     */
+    protected $titleY;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTitleY()
+    {
+        return $this->titleY;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setTitleY($titleY)
+    {
+        $this->titleY = (int) $titleY;
+
+        return $this;
+    }
+
+    /**
      * Subtitle.
      *
      * @var string
@@ -249,16 +324,16 @@ abstract class AbstractChart implements ChartInterface
     {
         return $this->credit;
     }
-    
+
     /**
      * Render
-     * 
+     *
      * @return array
      */
     public function render()
     {
         $renderer = new Renderer();
-        
+
         return $renderer->render($this);
     }
 

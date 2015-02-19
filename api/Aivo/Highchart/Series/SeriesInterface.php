@@ -345,4 +345,20 @@ interface SeriesInterface
      */
     public function getHoverState();
 
+    /**
+     * Add label styles
+     *
+     * @param array $labelStyle.
+     *
+     * @return self Reference to the chart.
+     */
+    public function setLabelStyle($labelStyle);
+
+    /**
+     * Gets the label styles.
+     *
+     * @return array label style.
+     */
+    public function getLabelStyle();
+
 }

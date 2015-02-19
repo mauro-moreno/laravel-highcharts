@@ -104,4 +104,29 @@ abstract class AbstractDataPoint implements DataPointInterface
         return $this;
     }
 
+    /**
+     * Color.
+     *
+     * @var string|null
+     */
+    protected $color;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setColor($color = null)
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
 }

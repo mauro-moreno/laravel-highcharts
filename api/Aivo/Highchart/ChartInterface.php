@@ -43,6 +43,57 @@ interface ChartInterface
     public function setTitle($title);
 
     /**
+     * Gets the chart title align
+     *
+     * @return string|null Title Align, or `null` if not set.
+     */
+    public function getTitleAlign();
+
+    /**
+     * Sets the chart title align.
+     *
+     * @param string|null $titleAlign Chart title Align,
+     * or `null` to remove the existing value.
+     *
+     * @return self Reference to the chart.
+     */
+    public function setTitleAlign($titleAlign = null);
+
+    /**
+     * Gets the chart title vertical align
+     *
+     * @return string|null Title Vertical Align, or `null` if not set.
+     */
+    public function getTitleVAlign();
+
+    /**
+     * Sets the chart title vertical align.
+     *
+     * @param string|null $titleVAlign Chart title vertical align,
+     * or `null` to remove the existing value.
+     *
+     * @return self Reference to the chart.
+     */
+    public function setTitleVAlign($titleVAlign = null);
+
+    /**
+     * Gets the chart title Y
+     *
+     * @return string|null Title Y, or `null` if not set.
+     */
+    public function getTitleY();
+
+    /**
+     * Sets the chart title Y.
+     *
+     * @param string|null $titleY Chart title y,
+     * or `null` to remove the existing value.
+     *
+     * @return self Reference to the chart.
+     */
+    public function setTitleY($titleY);
+
+    /**
      * Gets the chart subtitle;
      *
      * @return string|null Subtitle.

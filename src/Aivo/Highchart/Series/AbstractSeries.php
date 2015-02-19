@@ -563,4 +563,29 @@ abstract class AbstractSeries implements SeriesInterface
         return $this->hoverState;
     }
 
+    /**
+     * Label Style
+     *
+     * @var array
+     */
+    protected $labelStyle = array();
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setLabelStyle($labelStyle)
+    {
+        $this->labelStyle = $labelStyle;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLabelStyle()
+    {
+        return $this->labelStyle;
+    }
+
 }

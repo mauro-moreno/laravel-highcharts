@@ -217,4 +217,93 @@ class PieSeries extends AbstractSeries implements PieSeriesInterface
         return $this->hoverState;
     }
 
+    /**
+     * $innerSize
+     *
+     * @var float|null
+     */
+    protected $innerSize;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setInnerSize($size, $percentage = true)
+    {
+        if ($size !== null) {
+            if ($percentage === true) {
+                $this->innerSize = ((float) $size) . '%';
+            } else {
+                $this->innerSize = (float) $size;
+            }
+        } else {
+            $this->innerSize = null;
+        }
+
+        return $this;
+
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getInnerSize() {
+        return $this->innerSize;
+    }
+
+    /**
+     * $startAngle
+     *
+     * @var float|null
+     */
+    protected $startAngle;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setStartAngle($angle)
+    {
+        if ($angle !== null) {
+            $this->startAngle = (float) $angle;
+        } else {
+            $this->startAngle = null;
+        }
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getStartAngle() {
+        return $this->startAngle;
+    }
+
+    /**
+     * $endAngle
+     *
+     * @var float|null
+     */
+    protected $endAngle;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setEndAngle($angle)
+    {
+        if ($angle !== null) {
+            $this->endAngle = (float) $angle;
+        } else {
+            $this->endAngle = null;
+        }
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getEndAngle() {
+        return $this->endAngle;
+    }
+
 }
