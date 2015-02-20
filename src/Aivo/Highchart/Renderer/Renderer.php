@@ -326,15 +326,6 @@ class Renderer implements RendererInterface
         if (null !== $series->getYAxis()) {
             $options['yAxis'] = $series->getYAxis();
         }
-        if (null !== $series->getInnerSize()) {
-            $options['innerSize'] = $series->getInnerSize();
-        }
-        if (null !== $series->getStartAngle()) {
-            $options['startAngle'] = $series->getStartAngle();
-        }
-        if (null !== $series->getEndAngle()) {
-            $options['endAngle'] = $series->getEndAngle();
-        }
 
         foreach ($series->getDataPoints() as $dataPoint) {
             $options['data'][] = $this->renderDataPoint($dataPoint);
@@ -420,6 +411,18 @@ class Renderer implements RendererInterface
                 $options['size'] = true === $series->isSizeAPercentage() ?
                         $series->getSize() . '%' :
                         $series->getSize();
+            }
+
+            if (null !== $series->getInnerSize()) {
+                $options['innerSize'] = $series->getInnerSize();
+            }
+
+            if (null !== $series->getStartAngle()) {
+                $options['startAngle'] = $series->getStartAngle();
+            }
+
+            if (null !== $series->getEndAngle()) {
+                $options['endAngle'] = $series->getEndAngle();
             }
 
             $options['dataLabels']['distance'] = $series->getLabelsDistance();
