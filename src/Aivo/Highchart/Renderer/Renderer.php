@@ -101,6 +101,7 @@ class Renderer implements RendererInterface
                 'enabled' => $chart->hasLegend(),
             ),
             'tooltip' => $this->renderTooltip($chart->getTooltip()),
+            'extra' => $chart->getExtra(),
         );
 
         $seriesGroups = array();

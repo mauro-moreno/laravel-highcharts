@@ -326,6 +326,31 @@ abstract class AbstractChart implements ChartInterface
     }
 
     /**
+     * Extra.
+     *
+     * @var string
+     */
+    protected $extra;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getExtra()
+    {
+        return $this->extra;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setExtra($extra = null)
+    {
+        $this->extra = $extra;
+
+        return $this;
+    }
+
+    /**
      * Render
      *
      * @return array
