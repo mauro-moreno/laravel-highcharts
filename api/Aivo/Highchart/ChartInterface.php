@@ -210,4 +210,20 @@ interface ChartInterface
      */
     public function getCredit();
 
+    /**
+     * Gets the extra.
+     *
+     * @return string|null Extra, or `null` if not set.
+     */
+    public function getExtra();
+
+    /**
+     * Sets the chart extra data.
+     *
+     * @param string|null $extra Chart extra data, or `null`.
+     *
+     * @return self Reference to the chart.
+     */
+    public function setExtra($extra);
+
 }
