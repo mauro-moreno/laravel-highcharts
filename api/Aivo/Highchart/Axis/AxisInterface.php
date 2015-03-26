@@ -172,4 +172,22 @@ interface AxisInterface
      */
     public function setGridLineWidth($gridLineWidth);
 
+    /**
+     * Whether the axis is reversed.
+     *
+     * @return bool `true` if reversed, otherwise `false`.
+     */
+    public function isReversed();
+
+    /**
+     * Sets whether the axis is reversed.
+     *
+     * @param bool $reversed `true` if reversed, otherwise `false`.
+     *
+     * @return self Reference to the axis.
+     *
+     * @throws InvalidArgumentException If an argument is invalid.
+     */
+    public function setReversed($reversed = true);
+
 }

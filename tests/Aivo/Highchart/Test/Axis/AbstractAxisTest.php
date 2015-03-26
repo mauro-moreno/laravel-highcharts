@@ -152,4 +152,23 @@ class AbstractAxisTest extends TestCase
 
         $axis->setGridLineWidth(null);
     }
+
+    public function testReversed()
+    {
+        $axis = $this->getAxis();
+
+        $this->assertFalse($axis->isReversed());
+        $this->assertSame($axis, $axis->setReversed());
+        $this->assertTrue($axis->isReversed());
+    }
+
+    /**
+     * @expectedException \Aivo\Highchart\Exception\InvalidArgumentException
+     */
+    public function testReversedInvalidArgumentException()
+    {
+        $axis = $this->getAxis();
+
+        $axis->setReversed(null);
+    }
 }
