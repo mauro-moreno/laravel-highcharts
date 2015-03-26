@@ -236,6 +236,7 @@ class Renderer implements RendererInterface
     {
         $options = array(
             'opposite' => $axis->isOpposite(),
+            'reversed' => $axis->isReversed(),
             'showFirstLabel' => $axis->getLabel()->isShowFirst(),
             'showLastLabel' => $axis->getLabel()->isShowLast(),
         );
