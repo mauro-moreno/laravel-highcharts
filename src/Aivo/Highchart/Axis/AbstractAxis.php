@@ -262,4 +262,33 @@ abstract class AbstractAxis implements AxisInterface
         return $this;
     }
 
+    /**
+     * Is reversed.
+     *
+     * @var bool
+     */
+    protected $reversed = false;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isReversed()
+    {
+        return $this->reversed;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setReversed($reversed = true)
+    {
+        if (false === is_bool($reversed)) {
+            throw new InvalidArgumentException();
+        }
+
+        $this->reversed = $reversed;
+
+        return $this;
+    }
+
 }
