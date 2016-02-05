@@ -14,13 +14,17 @@ composer require mauro-moreno/laravel-highcharts
 or add the following to your `composer.json` file :
 
 ```json
-"mauro-moreno/laravel-highcharts": "dev-master"
+"mauro-moreno/laravel-highcharts": "^1.0.0"
 ```
 
 Then register this service provider with Laravel :
 
 ```php
-'Aivo\Highchart\HighchartServiceProvider',
+'providers' => [
+    ...
+    Aivo\Highchart\HighchartServiceProvider::class,
+    ...
+]
 ```
 
 Usage
